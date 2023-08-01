@@ -27,6 +27,9 @@ public class Item {
 	@NotNull(message = "A descrição é obrigatório")
 	private String descricao;
 	
+	@NotNull(message = "A tipagem masc/fem é obrigatório")
+	private String tipo;
+	
 	@NotNull(message = "A foto é obrigatório")
 	private String foto;
 	
@@ -75,6 +78,14 @@ public class Item {
 
 	public void setDescricao(String descricao) {
 		this.descricao = descricao;
+	}
+
+	public String getTipagem() {
+		return tipo;
+	}
+
+	public void setTipagem(String tipagem) {
+		this.tipo = tipo;
 	}
 
 	public String getFoto() {

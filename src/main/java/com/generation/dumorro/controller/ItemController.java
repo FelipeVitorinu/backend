@@ -1,4 +1,4 @@
-package com.generation.dumorro.controller;
+	package com.generation.dumorro.controller;
 
 import java.util.List;
 import java.util.Optional;
@@ -51,6 +51,11 @@ public class ItemController {
 	@GetMapping("/nome/{nome}")
 	public ResponseEntity<List<Item>> getByTitle(@PathVariable String nome) {
 		return ResponseEntity.ok(itemRepository.findAllByNomeContainingIgnoreCase(nome));
+	}
+
+	@GetMapping("/tipo/{tipo}")
+	public ResponseEntity<List<Item>> getByTipo(@PathVariable String tipo) {
+		return ResponseEntity.ok(itemRepository.findAllByNomeContainingIgnoreCase(tipo));
 	}
 
 	@PostMapping
